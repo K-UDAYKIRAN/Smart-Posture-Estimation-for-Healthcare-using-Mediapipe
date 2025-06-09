@@ -1,0 +1,64 @@
+/* Main CSS for Posture Analysis Web App */
+
+/* Video container styling */
+.webcam-container {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    position: relative;
+}
+
+#webcam, #overlay {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Metric displays */
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+    transition: width 0.3s ease;
+}
+
+/* Stats and charts */
+#postureChart {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+/* Badge styling */
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: normal;
+}
+
+/* Animation for loading */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .webcam-container {
+        aspect-ratio: 3/4;
+    }
+}
